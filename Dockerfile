@@ -1,5 +1,5 @@
-#versão do php
-FROM php:8.1-fpm-alpine
+#versão do php 7.4
+FROM php:7.4-fpm-alpine
 
 #correspondente a pasta SRC
 WORKDIR /var/www/html

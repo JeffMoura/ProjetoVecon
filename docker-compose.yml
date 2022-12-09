@@ -9,7 +9,7 @@ services:
   #Container nginx
   nginx: 
     image: nginx:stable-alpine
-    container_name: nginx_laravel
+    container_name: nginx_laravel_vecom
     ports: 
       - "8000:80" #Essa é a porta para acessar o site (pode ser alterada conforme necessidade)
     volumes:
@@ -25,7 +25,7 @@ services:
     build: 
       context: .  #contexto pasta raíz
       dockerfile: Dockerfile   #chama o arquivo Dockerfile
-    container_name: php_laravel
+    container_name: php_laravel_vecom
     volumes: 
       - ./:/var/www/html  
     ports: 
@@ -36,7 +36,7 @@ services:
   #composer - gerenciador de pacotes laravel-php
   composer:
     image: composer:latest
-    container_name: composer_laravel
+    container_name: composer_laravel_vecom
     volumes: 
       - ./:/var/www/html
     working_dir: /var/www/html  #irá executar neste diretório
@@ -50,7 +50,7 @@ services:
     build: 
       context: .
       dockerfile: Dockerfile
-    container_name: artisan_laravel
+    container_name: artisan_laravel_vecom
     volumes: 
       - ./:/var/www/html
     working_dir: /var/www/html
